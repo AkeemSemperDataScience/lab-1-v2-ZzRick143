@@ -76,7 +76,6 @@ def test_lab1Question4_1():
     # Test case 1
     file_name = "github/test_file1.txt"
     expected_list = [1, 2, 3, 4, 5]
-    print(lab1Question4(file_name))
     assert lab1Question4(file_name) == expected_list
 def test_lab1Question4_2():
     # Test case 2
