@@ -41,7 +41,6 @@ def lab1Question5(list_numbers):
     # Take an input of a list of numbers
     # Return the mode from that list. 
     mode_of_list = None
-    hVal = 0
     aDict={}
     for value in mode_of_list:
         if value in aDict:
@@ -49,11 +48,11 @@ def lab1Question5(list_numbers):
         else:
             aDict[value] = 1 
     for key,value in aDict.items():
-        if value > hVal:
-            hVal = value
+        if value > mode_of_list:
+            mode_of_list = value
             mode_of_list = []
             mode_of_list.append(key)
-        elif value == hVal:
+        elif value == mode_of_list:
             mode_of_list.append(key)
         else:
             continue
