@@ -43,7 +43,7 @@ def lab1Question5(list_numbers):
     mode_of_list = None
     hVal = 0
     aDict={}
-    for value in list_numbers:
+    for value in mode_of_list:
         if value in aDict:
             aDict[value] += 1
         else:
