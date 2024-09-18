@@ -35,28 +35,24 @@ def lab1Question4(file_name):
     f=open(file_name, 'r')
     lines = f.readlines()
     for value in lines:
-        list_of_nums.append(int(value.strip()))
+        list_of_nums.append((int(value.strip())))
     return list_of_nums
 
 def lab1Question5(list_numbers):
     # Take an input of a list of numbers
     # Return the mode from that list. 
     mode_of_list = None
+    hVal = 0
     aDict={}
-    for value in mode_of_list:
+    for value in list_numbers:
         if value in aDict:
             aDict[value] += 1
         else:
             aDict[value] = 1 
-    for key,value in aDict.items():
-        if value > mode_of_list:
-            mode_of_list = value
-            mode_of_list = []
-            mode_of_list.append(key)
-        elif value == mode_of_list:
-            mode_of_list.append(key)
-        else:
-            continue
+    for item in aDict.items():
+        if item[1] > hVal:
+            hVal = item[1]
+            mode_of_list = item[0]
     return mode_of_list
 
 def lab1Question6(quarters, dimes, nickels, pennies):
